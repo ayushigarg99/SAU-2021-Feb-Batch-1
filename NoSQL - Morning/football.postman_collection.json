@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "6136ee88-5bca-4f46-849a-cf34bf61f5fb",
+		"name": "football",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/football/goals/10",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"playerId\":\"F101\",\r\n    \"playerName\":\"Ayushi\",\r\n    \"playerAvg\":2.45,\r\n    \"goals\":12\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/football/goals/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"football",
+						"goals",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/football",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"playerId\":\"F102\",\r\n    \"playerName\":\"Ronaldo\",\r\n    \"playerAvg\":4.6,\r\n    \"goals\":20\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/football",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"football"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/football/goals/10",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/football/goals/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"football",
+						"goals",
+						"10"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
