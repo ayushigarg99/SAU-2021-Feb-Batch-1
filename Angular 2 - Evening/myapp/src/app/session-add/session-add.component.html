@@ -1,0 +1,20 @@
+<div> <form [formGroup]="sessionForm">
+    <mat-form-field appearance="fill">
+        <mat-label>Session Name</mat-label>
+        <input matInput formControlName="sessionname">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Session Instructor Name</mat-label>
+        <input matInput formControlName="instructorname">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Description</mat-label>
+        <input matInput formControlName="description">
+      </mat-form-field>
+
+      <button mat-raised-buton  color="primary" (click)="addToList()">Save</button>
+    </form>
+</div>
+
