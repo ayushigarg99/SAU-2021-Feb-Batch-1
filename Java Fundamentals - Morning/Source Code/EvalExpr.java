@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 public class EvalExpr {
 	public static void main(String args[]) {
-		@SuppressWarnings("resource")
-		Scanner sc = new Scanner(System.in);
-		String str = sc.nextLine();
-	    double result = eval(str);
-	    System.out.println(result);
+		
+	    System.out.println(eval("-5+8*6"));
+	    System.out.println(eval("(55+9)%9"));
+	    System.out.println((int)(eval("20+ -3*5/8")));
+	    System.out.println(eval("5+15/3*2-8%3"));
 	    
 	}
 	
@@ -48,7 +48,8 @@ public static double eval(final String str) {
 	            double x = evalFactor();
 	            for (;;) {
 	                if      (select('*')) x *= evalFactor(); 
-	                else if (select('/')) x /= evalFactor(); 
+	                else if (select('/')) x /= evalFactor();
+	                else if (select('%')) x %= evalFactor();
 	                else return x;
 	            }
 	        }
