@@ -1,10 +1,15 @@
 package Assignments;
 
 
+@SuppressWarnings("serial")
 class MyUncheckedException extends RuntimeException {
-	   public MyUncheckedException(String message) {
-	      super(message);
-	   }
+	   private String message = new String("It is an prime number");
+
+   
+
+	public String message() {
+        return this.message;
+    }
 	}
 
 public class ExceptionHandling {
@@ -15,8 +20,14 @@ public class ExceptionHandling {
 		    if (!isPrime(i)) 
 		      System.out.println(i);
 		    else {
-		    	throw new MyUncheckedException(i + " is a prime number."); 
+		    try{
+		    	throw new MyUncheckedException(); 
 		    }
+		    catch(MyUncheckedException e){
+		    	System.out.println(e.message() +" "+ i);
+		    }
+		    }
+		    
 		  }
 	}  
 		  
@@ -33,3 +44,4 @@ public class ExceptionHandling {
 		  
 		}
 }
+
